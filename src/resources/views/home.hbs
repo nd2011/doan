@@ -1,0 +1,48 @@
+
+<div id="carouselExample" class="carousel slide mb-5" data-ride="carousel">
+  <div class="carousel-inner">
+    {{#each slides}}
+    <div class="carousel-item {{#if @first}}active{{/if}}">
+      <a href="{{this.link}}">
+        <img src="{{this.image}}" class="d-block w-100" alt="{{this.title}}">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{this.title}}</h5>
+        <p>{{this.description}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExample" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExample" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Danh sách khóa học -->
+<div class="mt-4">
+  <div class="row">
+    {{#each courses}}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card card-course-item">
+        <a href="/courses/{{this.slug}}">
+          <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+        </a>
+        <div class="card-body">
+          <a href="/courses/{{this.slug}}">
+            <h5 class="card-title">{{this.name}}</h5>
+          </a>
+          <p class="card-text">{{this.description}}</p>
+          <a href="#" class="btn btn-primary">Mua khóa học</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<!-- Nên đặt ngay TRƯỚC thẻ </body> -->
+<!-- jQuery + Popper + Bootstrap 4 JS -->
+

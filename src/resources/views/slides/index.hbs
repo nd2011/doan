@@ -1,0 +1,43 @@
+<div class="mt-4">
+    <div>
+        <h3>Slide của tôi</h3>
+        <a href="/slides/create" class="btn btn-primary">Thêm Slide</a>
+    </div>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tiêu đề</th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">Mô tả</th>
+                <th scope="col" colspan="2">Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each slides}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.title}}</td>
+                <td><img src="{{this.image}}" width="100" /></td>
+                <td>{{this.description}}</td>
+                <td>
+                    <a href="/slides/{{this._id}}/edit" class="btn btn-link">Sửa</a>
+                </td>
+                <td>
+                    <form action="/slides/{{this._id}}/delete" method="POST">
+                        <button type="submit" class="btn btn-link">Xóa</button>
+                    </form>
+                </td>
+            </tr>
+            {{else}}
+            <tr>
+                <td colspan="6" class="text-center">
+                    Bạn chưa có slide nào.
+                    <a href="/slides/create">Thêm slide mới</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

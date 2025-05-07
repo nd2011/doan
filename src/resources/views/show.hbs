@@ -1,0 +1,60 @@
+
+<div class="slideshow-container">
+  <!-- Slides sẽ được tải bằng JavaScript -->
+</div>
+
+<script>
+  let currentSlide = 0;
+  let slides = [];
+
+  // Tải ảnh từ API
+  async function loadSlides() {
+    const response = await fetch('/slides');
+    slides = await response.json();
+    renderSlide();
+    setInterval(nextSlide, 5000); // Tự động chuyển sau 5s
+  }
+
+  function renderSlide() {
+    const container = document.querySelector('.slideshow-container');
+    container.innerHTML = `
+      <div class="slide">
+        <img src="${slides[currentSlide].imageUrl}" alt="${slides[currentSlide].title}">
+        <div class="text">${slides[currentSlide].title}</div>
+      </div>
+      <a class="prev" onclick="changeSlide(-1)">❮</a>
+      <a class="next" onclick="changeSlide(1)">❯</a>
+    `;
+  }
+
+  function changeSlide(n) {
+    currentSlide = (currentSlide + n + slides.length) % slides.length;
+    renderSlide();
+  }
+
+  function nextSlide() {
+    changeSlide(1);
+  }
+
+  // Khởi tạo
+  loadSlides();
+</script>
+
+<style>
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  .slide img { width: 100%; }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .next { right: 0; }
+</style>
