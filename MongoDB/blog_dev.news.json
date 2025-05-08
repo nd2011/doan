@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "681b1048aa059e7aec265bc3"
+  },
+  "title": "Hoa lư",
+  "content": "XE ĐẠP\r\nNhạc Nhật\r\nSáng tác: Đinh Mạnh Ninh\r\nHoà âm: 24Beat \r\nMix & master: Saigon Root Music\r\nVideo được sản xuất bởi Allaccess & Dargon\r\n----\r\nConcert 25 là chuỗi chương trình âm nhạc được Hoàng Dũng và Allaccess tổ chức, nằm trong dự án quảng bá CD Album \"25\" - Album phòng thu đầu tay của Hoàng Dũng. Chương trình gồm 2 đêm nhạc được tổ chức tại Hà Nội và TP.HCM.\r\n----\r\nHãy “ Subscribe” theo dõi kênh ca sĩ Hoàng Dũng để có cái nhìn cận cảnh hơn về những cống hiến trong âm nhạc của ca sĩ Hoàng Dũng nhé.",
+  "image": "https://img.youtube.com/vi/undefined/sddefault.jpg",
+  "videoId": "",
+  "author": "anh",
+  "deleted": true,
+  "createdAt": {
+    "$date": "2025-05-07T07:48:24.349Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-07T08:08:46.291Z"
+  },
+  "slug": "hoa-lu",
+  "__v": 0,
+  "deletedAt": {
+    "$date": "2025-05-07T08:08:46.290Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b105eaa059e7aec265bc8"
+  },
+  "title": "xe đạp",
+  "content": "✅ Kết nối MongoDB thành công\r\nE:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\mongoose\\lib\\query.js:4495\r\n    throw new MongooseError('Query.prototype.exec() no longer accepts a callback');\r\n          ^\r\n\r\nMongooseError: Query.prototype.exec() no longer accepts a callback\r\n    at model.Query.exec (E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\mongoose\\lib\\query.js:4495:11)\r\n    at makeUniqueShortIdSlug (E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\mongoose-slug-generator\\lib\\slug-generator.js:178:57)        \r\n    at E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\mongoose-slug-generator\\lib\\slug-generator.js:86:21\r\n    at E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\async\\lib\\async.js:181:20\r\n    at async.forEachOf.async.eachOf (E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\async\\lib\\async.js:233:13)\r\n    at async.forEach.async.each (E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\async\\lib\\async.js:209:22)\r\n    at model.<anonymous> (E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\mongoose-slug-generator\\lib\\slug-generator.js:74:15)\r\n    at callMiddlewareFunction (E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\kareem\\index.js:628:27)\r\n    at next (E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\kareem\\index.js:93:7)\r\n    at model.next (E:\\CN02-Doannamduong\\Code\\Nodejs\\nodejs_blog-master\\node_modules\\kareem\\index.js:117:9)\r\n\r\nNode.js v23.6.0\r\n[nodemon] app crashed - waiting for file changes before starting...",
+  "image": "https://img.youtube.com/vi/undefined/sddefault.jpg",
+  "videoId": "9P_sQw9BBuE",
+  "author": "anh",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-05-07T07:48:46.579Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-07T08:14:16.209Z"
+  },
+  "slug": "xe-dap",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681b113b75353ea7114abcae"
+  },
+  "title": "anh",
+  "content": "App đang chạy tại http://localhost:5000\r\n✅ Kết nối MongoDB thành công\r\n::1 - - [07/May/2025:07:48:24 +0000] \"POST /news/store HTTP/1.1\" 302 44 \"http://localhost:5000/news/create\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36\"\r\n::1 - - [07/May/2025:07:48:24 +0000] \"GET /me/stored/news HTTP/1.1\" 304 - \"http://localhost:5000/news/create\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36\"\r\n::1 - - [07/May/2025:07:48:26 +0000] \"GET /news/create HTTP/1.1\" 304 - \"http://localhost:5000/me/stored/news\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36\"\r\n::1 - - [07/May/2025:07:48:46 +0000] \"POST /news/store HTTP/1.1\" 302 44 \"http://localhost:5000/news/create\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36\"\r\n::1 - - [07/May/2025:07:48:46 +0000] \"GET /me/stored/news HTTP/1.1\" 304 - \"http://localhost:5000/news/create\" \"Mozilla/5.0 (Windows NT 10.0; Win64",
+  "image": "https://img.youtube.com/vi/undefined/sddefault.jpg",
+  "videoId": "9P_sQw9BBuE",
+  "author": "anh",
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-05-07T07:52:27.741Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-07T07:52:27.741Z"
+  },
+  "slug": "anh",
+  "__v": 0
+}]

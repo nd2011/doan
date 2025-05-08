@@ -33,7 +33,9 @@ h2 {
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -88,4 +90,12 @@ h2 {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
+}
+.description-box {
+  background-color: #333; /* Nền màu tối */
+  color: #fff; /* Chữ màu trắng */
+  padding: 15px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo tròn góc */
+  font-size: 16px; /* Kích thước chữ */
+  line-height: 1.5; /* Khoảng cách dòng */
 }

@@ -1,53 +1,54 @@
 <div class="mt-4">
-    <h3>Đăng khoá học</h3>
-    <form method="post" action="/courses/store">
+    <h3>Đăng tin tức</h3>
+    <form method="post" action="/news/store">
         <div class="form-group">
-            <label for="name">Tên</label>
-            <input type="text" class="form-control" id="name" name="name">
+            <label for="title">Tiêu đề</label>
+            <input type="text" class="form-control" id="title" name="title" required>
         </div>
 
-        <div class="form-group">
-            <label for="description">Mô tả chương trình</label>
-            <input type="text" class="form-control" id="description" name="description">
-        </div>
+        
 
         <div class="form-group">
             <label for="youtubeLink">Link YouTube</label>
             <input type="text" class="form-control" id="youtubeLink" placeholder="Dán link YouTube vào đây">
         </div>
 
-        <!-- Input ẩn để lưu videoID gửi về backend -->
-        <input type="hidden" id="videoID" name="videoID">
+        <div class="form-group">
+            <label for="content">Nội dung</label>
+            <textarea class="form-control" id="content" name="content" rows="4"></textarea>
+        </div>
+        <!-- Input ẩn để lưu videoId gửi về backend -->
+        <input type="hidden" id="videoId" name="videoId">
 
         <div class="form-group">
-            <label for="level">Mức độ</label>
-            <input type="text" class="form-control" id="level" name="level">
+            <label for="author">Tác giả</label>
+            <input type="text" class="form-control" id="author" name="author" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Thêm khoá học</button>
+        <button type="submit" class="btn btn-primary">Thêm tin tức</button>
     </form>
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const youtubeLinkInput = document.getElementById("youtubeLink");
-        const videoIDInput = document.getElementById("videoID");
+        const videoIdInput = document.getElementById("videoId");
 
         youtubeLinkInput.addEventListener("input", function () {
             const link = youtubeLinkInput.value.trim();
-            let videoID = "";
+            let videoId = "";
 
             try {
                 const url = new URL(link);
 
                 if (url.hostname === "youtu.be") {
-                    videoID = url.pathname.slice(1);
+                    videoId = url.pathname.slice(1);
                 } else if (url.hostname.includes("youtube.com")) {
-                    videoID = url.searchParams.get("v");
+                    videoId = url.searchParams.get("v");
                 }
 
-                videoIDInput.value = videoID || "";
+                videoIdInput.value = videoId || "";
             } catch (e) {
-                videoIDInput.value = "";
+                videoIdInput.value = "";
             }
         });
     });

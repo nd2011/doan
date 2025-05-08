@@ -1,1 +1,39 @@
-<h1>NEWS PAGE</h1>
+<!-- Carousel cho tin tức nổi bật -->
+<div id="carouselExample" class="carousel slide mb-5" data-ride="carousel">
+  <div class="carousel-inner">
+    {{#each featuredNews}}
+    <div class="carousel-item {{#if @first}}active{{/if}}">
+      <img class="d-block w-100" src="{{this.image}}" alt="{{this.title}}">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{this.title}}</h5>
+        <p>{{this.content}}</p>
+      </div>
+    </div>
+    {{/each}}
+
+
+<!-- Danh sách tin tức -->
+<div class="mt-4">
+  <div class="row">
+    {{#each news}}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card card-news-item">
+        <a href="/news/{{this.slug}}">
+          <img class="card-img-top" src="{{this.image}}" alt="{{this.title}}">
+        </a>
+        <div class="card-body">
+          <a href="/news/{{this.slug}}">
+            <h5 class="card-title">{{this.title}}</h5>
+          </a>
+          <p class="card-text"><small class="text-muted">Tác giả: {{this.author}}</small></p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<!-- Thư viện JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

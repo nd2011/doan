@@ -6,13 +6,13 @@ class SlideController {
   // [GET] /slides
   index(req, res, next) {
     Slide.find({})
-        .then((slides) =>
-            res.render('slides/index', {
-                slides: mutipleMongooseToObject(slides),
-            }),
-        )
-        .catch(next);
-}
+      .then((slides) =>
+        res.render('slides/index', {
+          slides: mutipleMongooseToObject(slides),
+        }),
+      )
+      .catch(next);
+  }
 
   // [GET] /slides/create
   create(req, res) {
@@ -20,19 +20,19 @@ class SlideController {
   }
 
   // [POST] /slides/store
- store(req, res) {
+  store(req, res) {
     const slide = new Slide(req.body);
-    slide.save()
+    slide
+      .save()
       .then(() => res.redirect('/slides'))
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
         res.status(500).send('Error saving slide');
       });
   }
 
   // [GET] /slides/:id/edit
-  edit (req, res, next) 
-  {
+  edit(req, res, next) {
     Slide.findById(req.params.id)
       .then((slide) => {
         res.render('slides/edit', {

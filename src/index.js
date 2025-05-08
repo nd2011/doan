@@ -23,12 +23,14 @@ app.use(express.json());
 app.use(cookieParser());
 
 // ⚠️ Đặt middleware session **TRƯỚC** `route(app)`
-app.use(session({
-  secret: 'duong123', 
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 1000 * 60 * 60 } // 1 giờ
-}));
+app.use(
+  session({
+    secret: 'duong123',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 }, // 1 giờ
+  }),
+);
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
@@ -46,23 +48,30 @@ app.engine(
     extname: '.hbs',
     helpers: {
       sum: (a, b) => a + b,
-      formatDate: function(date) {
+      formatDate: function (date) {
         if (!date) return '';
         return new Date(date).toLocaleDateString('vi-VN', {
           day: '2-digit',
           month: '2-digit',
           year: 'numeric',
           hour: '2-digit',
-          minute: '2-digit'
+          minute: '2-digit',
         });
       },
-      moment: function(date, options) {
+      moment: function (date, options) {
         if (!date) return 'N/A';
         const format = options.hash.format || 'DD/MM/YYYY HH:mm';
         return moment(date).format(format);
       },
+      truncate: function (text, length) {
+        // 👈 Thêm helper truncate
+        if (text && text.length > length) {
+          return text.substring(0, length) + '...';
+        }
+        return text;
+      },
     },
-  })
+  }),
 );
 
 app.set('view engine', 'hbs');

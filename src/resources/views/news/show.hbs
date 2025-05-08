@@ -1,7 +1,11 @@
-<div class="mt-4">
+<style>
+
+}
+
+</style>
+<div class="mt-4-show">
     <div class="row">
         <div class="col-lg-3">
-            <button>ĐỌC NGAY</button>
             <ul>
                 <li>{{news.author}}</li>
             </ul>
@@ -10,13 +14,9 @@
         <div class="col-lg-9">
             <h2>{{news.title}}</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/{{news.videoId}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>{{news.description}}</p>
-            <div class="mt-2">
+                <div class="description-box">
                 <p>{{news.content}}</p>
-            </div>
+                </div>
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

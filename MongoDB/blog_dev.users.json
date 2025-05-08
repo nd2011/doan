@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "6819c688f407e7a07e8ac08d"
+  },
+  "username": "duong",
+  "password": "$2b$10$4G8KPQ.auN/piRXjOXNUz.bDfrh2Ppf/vhNNw1MyflVhLQn36Yep2",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6819c6a340dab0bd279920cf"
+  },
+  "username": "duong12",
+  "password": "$2b$10$q39LBufnTPQhv6Men/ZdmeP7XYdMrCGKRXVohvLpc6l6oRFEJbKWG",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6819deb7d762754709e2bbf4"
+  },
+  "username": "duong3",
+  "password": "$2b$10$mW1KyzQpoQOwyO9hU6iyj.F2RFB7BQBOvgriJanAmAvgUxitc/qNG",
+  "__v": 0
+}]
